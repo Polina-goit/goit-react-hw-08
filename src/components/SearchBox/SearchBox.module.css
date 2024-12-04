@@ -1,0 +1,13 @@
+.serchContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  width: 450px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  font-size: 20px;
+  min-width: 250px;
+}

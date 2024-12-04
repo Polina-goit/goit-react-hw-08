@@ -1,0 +1,13 @@
+.button {
+  color: blue;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 10ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: rgb(232, 245, 250);
+  }
+}
