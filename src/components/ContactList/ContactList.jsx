@@ -9,7 +9,6 @@ import css from "../ContactList/ContactList.module.css";
 
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
-  const isLoading = useSelector(selectLoading);
 
   return (
     <>
