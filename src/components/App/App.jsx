@@ -24,15 +24,17 @@ const App = () => {
       <ContactForm />
       <SearchBox />
       {isLoading && !error && (
-        <Oval
-          visible={true}
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="oval-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-        />
+        <div className={css.loader}>
+          <Oval
+            visible={true}
+            height="80"
+            width="80"
+            color="blue"
+            ariaLabel="oval-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
       )}
       <ContactList />
     </div>

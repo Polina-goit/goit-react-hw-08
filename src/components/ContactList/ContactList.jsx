@@ -13,17 +13,17 @@ const ContactList = () => {
 
   return (
     <>
-      {filteredContacts.length === 0 && !isLoading ? (
-        <p className={css.infoText}>No contacts found 😢</p>
-      ) : (
-        <ul className={css.listContacts}>
-          {filteredContacts.map((contact) => (
-            <li className={css.itemContact} key={contact.id}>
-              <Contact data={contact} />
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className={css.list}>
+        {filteredContacts.map((contact) => (
+          <li className={css.listItem} key={contact.id}>
+            <Contact
+              name={contact.name}
+              number={contact.number}
+              id={contact.id}
+            />
+          </li>
+        ))}
+      </ul>
     </>
   );
 };

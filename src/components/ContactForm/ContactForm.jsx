@@ -1,7 +1,6 @@
-import React from "react";
 import { useId } from "react";
 import { Formik, Form, Field } from "formik";
-import { nanoid } from "nanoid";
+
 import * as Yup from "yup";
 import { ErrorMessage } from "formik";
 // import { initialValues } from "../../redux/contactsSlice";
@@ -15,7 +14,7 @@ const FeedbackSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Enter your name!"),
   number: Yup.string()
-    .matches(/^\d{3}-\d{3}-\d{4}$/, "Invalid phone number format")
+    // .matches(/^\d{3}-\d{3}-\d{4}$/, "Invalid phone number format")
     .required("Enter your email!"),
 });
 

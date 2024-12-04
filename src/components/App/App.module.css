@@ -50,3 +50,9 @@ h1 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
