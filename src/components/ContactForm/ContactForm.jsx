@@ -7,7 +7,7 @@ import { ErrorMessage } from "formik";
 // import { initialValues } from "../../redux/contactsSlice";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
@@ -15,7 +15,7 @@ const FeedbackSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Enter your name!"),
   number: Yup.string()
-    .matches(/^\d{3}-\d{2}-\d{2}$/, "Invalid phone number format")
+    .matches(/^\d{3}-\d{3}-\d{4}$/, "Invalid phone number format")
     .required("Enter your email!"),
 });
 

@@ -5,7 +5,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import ContactForm from "../ContactForm/ContactForm";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { selectError, selectLoading } from "../../redux/selectors";
+import { selectError, selectLoading } from "../../redux/contactsSlice";
 import { fetchContacts } from "../../redux/contactsOps";
 import { Oval } from "react-loader-spinner";
 
