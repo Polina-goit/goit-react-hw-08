@@ -1,14 +1,10 @@
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
-
-axios.defaults.baseURL = 'https://connections-api.goit.global';
 
 export const fetchContacts = createAsyncThunk("contacts/fetchAll",
     async (_, thunkAPI) => {
         try {
-            const respons = await axios('/contacts');
+            const respons = await axios.get('/contacts');
             return respons.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);
@@ -17,38 +13,40 @@ export const fetchContacts = createAsyncThunk("contacts/fetchAll",
 );
 
 export const addContact = createAsyncThunk("contacts/addContact",
-    async ({ name, number }, thunkAPI) => {
+    async (value, thunkAPI) => {
         try {
-            const respons = await axios.post('/contacts', { name, number });
-            return respons.data;
+            const respons = await axios.post('/contacts', value);
+                        return respons.data;
         } catch (error) {
-            return thunkAPI.rejectWithValue(error.message);
+                       return thunkAPI.rejectWithValue(error.message);
         }
     }
-);
+)
 
 export const deleteContact = createAsyncThunk("contacts/deleteContact",
-    async (contactId, thunkAPI) => {
+    async (id, thunkAPI) => {
         try {
-            const respons = await axios.delete(`/contacts/${contactId}`);
+            const respons = await axios.delete(`/contacts/${id}`);
+            
             return respons.data;
         } catch (error) {
-            return thunkAPI.rejectWithValue(error.message);
+                       return thunkAPI.rejectWithValue(error.message);
         }
     }
-);
+)
 
 export const updateContact = createAsyncThunk(
     'contacts/updateContact',
-    async ({ name, number }, thunkAPI) => {
+    async (data, thunkAPI) => {
         try {
-            const respons = await axios.patch(`/contacts/${{ name, number }.id}`, {
-                name,
-                number,
+            const respons = await axios.patch(`/contacts/${data.id}`, {
+                name: data.name,
+                number: data.number,
             });
+           
             return respons.data;
         } catch (error) {
-          return thunkAPI.rejectWithValue(error.message);
+                        return thunkAPI.rejectWithValue(error.message);
         }
     }
-);
+)
