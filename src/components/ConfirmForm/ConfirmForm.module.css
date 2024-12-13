@@ -1,16 +1,19 @@
-.thumbInputEdit {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 12px;
+.modalDelete {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  text-align: center;
+
+  margin-bottom: 10px;
 }
 
-.thumbBtnEdit {
+.thumbBtnAction {
   display: flex;
   justify-content: space-evenly;
 }
 
-.btnActionEdit {
+.btnAction {
   border-radius: 50px;
   background-color: #e1dae9;
   box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
@@ -22,17 +25,7 @@
     color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btnActionEdit:hover {
+.btnAction:hover {
   background-color: #00afd7;
   color: #f0eafa;
-}
-
-.btnActionEdit:disabled {
-  background-color: #ccc;
-
-  color: #999;
-
-  cursor: not-allowed;
-
-  box-shadow: none;
 }
