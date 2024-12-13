@@ -19,6 +19,7 @@ import {
 } from "../../redux/auth/selectors";
 import Login from "../../pages/Login";
 import Contact from "../Contact/Contact";
+import ContactsPage from "../../pages/ContactsPage/ContactsPage";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -65,7 +66,10 @@ const App = () => {
             <Route
               path="/contacts"
               element={
-                <PrivateRoute redirectTo="/login" component={<Contact />} />
+                <PrivateRoute
+                  redirectTo="/login"
+                  component={<ContactsPage />}
+                />
               }
             />
             <Route path="*" element={<NotFoundPage />} />
