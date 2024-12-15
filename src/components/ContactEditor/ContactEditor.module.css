@@ -16,15 +16,15 @@
   box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
   padding: 5px 20px;
   border: none;
-  color: #00afd7;
+  color: blue;
 
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnActionEdit:hover {
-  background-color: #00afd7;
-  color: #f0eafa;
+  background-color: blue;
+  color: white;
 }
 
 .btnActionEdit:disabled {

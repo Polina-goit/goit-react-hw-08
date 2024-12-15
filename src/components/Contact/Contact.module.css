@@ -11,3 +11,34 @@
     background-color: rgb(232, 245, 250);
   }
 }
+
+.buttonAction {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5px;
+
+  width: 105px;
+  height: 40px;
+
+  border-radius: 50px;
+  background-color: lightcyan;
+  padding: 7px 0;
+  border: none;
+  color: blue;
+}
+.buttonAction:hover {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5px;
+
+  width: 105px;
+  height: 40px;
+
+  border-radius: 50px;
+  background-color: lightcyan;
+  padding: 7px 0;
+  border: none;
+  color: black;
+}

@@ -18,7 +18,6 @@ import {
   selectUser,
 } from "../../redux/auth/selectors";
 import Login from "../../pages/Login";
-import Contact from "../Contact/Contact";
 import ContactsPage from "../../pages/ContactsPage/ContactsPage";
 
 const App = () => {
