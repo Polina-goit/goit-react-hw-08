@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 import { PrivateRoute } from "../../PrivateRoute";
 import { RestrictedRoute } from "../../RestrictedRoute";
-import { Layout } from "../../Layout";
+import { Layout } from "../Layout";
 import Home from "../../pages/Home/Home";
 import {
   selectIsLoggedIn,
